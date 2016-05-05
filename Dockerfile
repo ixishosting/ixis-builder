@@ -25,7 +25,7 @@ RUN unzip master.zip && \
     
 ### Install PHP and Drupal related tools
 
-RUN apk add --update php php-openssl php-json php-phar php-ctype curl
+RUN apk add --update php php-openssl php-json php-phar php-ctype curl git
 
 ### Setup Composer and Drush 8
 
