@@ -10,18 +10,11 @@ RUN tar xzvf rancher-compose-linux-amd64-v0.7.4.tar.gz && \
     mv rancher-compose-v0.7.4/rancher-compose /usr/bin && \
     rm -Rf /tmp/*
 
-### Setup s3cmd command line tool
+### Setup Amazon awscli command line tool
 
 RUN apk add --update python && \
     apk add --update py-pip && \
-    pip install python-dateutil
-
-ADD https://github.com/s3tools/s3cmd/archive/master.zip /tmp/
-
-RUN unzip master.zip && \
-    cd s3cmd-master && \
-    python setup.py install && \
-    rm -Rf /tmp/*
+    pip install awscli
     
 ### Install PHP and Drupal related tools
 
