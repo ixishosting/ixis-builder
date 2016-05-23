@@ -5,3 +5,4 @@ A minimal docker image built on Alpine for usage with Drone.io providing the fol
   * rancher-compose
   * awscli
   * glibc
+  * bash
