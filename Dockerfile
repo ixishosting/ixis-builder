@@ -22,7 +22,7 @@ RUN apk add --update python && \
 
 ### Install PHP and Drupal related tools
 
-RUN apk add --update php php-openssl php-json php-phar php-ctype curl git
+RUN apk add --update php php-openssl php-json php-phar php-ctype curl git openssh
 
 ### Setup Composer and Drush 8
 
