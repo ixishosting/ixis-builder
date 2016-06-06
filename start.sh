@@ -7,5 +7,7 @@
 ### setup ssh keys ###
 export GIT_SSH_COMMAND="ssh -i /keys/id_gogs"
 
+printenv
+
 ### clone build repo ###
 git clone $GIT_BUILD_URL /tmp/build
