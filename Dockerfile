@@ -17,7 +17,7 @@ RUN apk add --no-cache python py-pip && \
     pip install awscli
 
 ### Install PHP and Drupal related tools ###
-RUN apk add --no-cache php php-openssl php-json php-phar php-ctype curl git openssh
+RUN apk add --no-cache php5 php5-openssl php5-json php5-phar php5-ctype curl git openssh
 
 ### Install composer and drush ###
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
