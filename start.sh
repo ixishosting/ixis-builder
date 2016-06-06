@@ -9,5 +9,7 @@ export GIT_SSH_COMMAND="ssh -i /keys/id_gogs"
 
 printenv
 
+echo $GIT_BUILD_URL
+
 ### clone build repo ###
 git clone $GIT_BUILD_URL /tmp/build
