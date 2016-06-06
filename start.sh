@@ -8,4 +8,4 @@
 export GIT_SSH_COMMAND="ssh -i /keys/id_gogs"
 
 ### clone build repo ###
-git clone GIT_BUILD_URL /tmp/build
+git clone $GIT_BUILD_URL /tmp/build
