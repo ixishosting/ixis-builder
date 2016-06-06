@@ -11,4 +11,4 @@ echo $GIT_BUILD_URL
 
 
 ### clone build repo ###
-GIT_SSH_COMMAND='ssh -i /keys/id_gogs -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no' git clone $GIT_BUILD_URL /tmp/build
+ssh-agent bash -c 'ssh-add /keys/id_gogs; git clone $GIT_BUILD_URL /tmp/build
