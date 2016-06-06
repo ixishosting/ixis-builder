@@ -5,6 +5,7 @@
 ###
 
 ### setup ssh keys ###
+mkdir -p /root/.ssh/
 cp /keys/id_gogs /root/.ssh/id_rsa
 chmod 400 /root/.ssh/id_rsa
 
