@@ -11,4 +11,4 @@ echo $GIT_BUILD_URL
 
 
 ### clone build repo ###
-ssh-agent bash -c 'ssh-add /keys/id_gogs; git clone $GIT_BUILD_URL /tmp/build
+ssh-agent bash -c 'ssh-add /keys/id_gogs; git clone $GIT_BUILD_URL /tmp/build'
