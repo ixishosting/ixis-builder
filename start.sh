@@ -13,7 +13,7 @@ chmod 400 /root/.ssh/id_rsa
 echo "StrictHostKeyChecking no" > ~/.ssh/config
 
 ### clone build repo ###
-ssh-agent bash -c 'ssh-add /keys/id_rsa; git clone $GIT_BUILD_URL /tmp/build'
+git clone $GIT_BUILD_URL /tmp/build
 
 ### run the build ###
 bash /tmp/build/build.sh
