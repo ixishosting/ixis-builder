@@ -6,7 +6,7 @@
 
 ### setup ssh keys ###
 mkdir -p /root/.ssh
-cat /keys/id_rsa > /root/.ssh/id_rsa
+cat /keys/id_gogs > /root/.ssh/id_rsa
 chmod 400 /root/.ssh/id_rsa
 
 ### stop ssh moaning about fingerprints ###
