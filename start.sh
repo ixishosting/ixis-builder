@@ -5,10 +5,15 @@
 ###
 
 ### setup ssh keys ###
-printenv
+mkdir -p /root/.ssh
+cat /keys/id_rsa > /root/.ssh/id_rsa
+chmod 400 /root/.ssh/id_rsa
 
-echo $GIT_BUILD_URL
-
+### stop ssh moaning about fingerprints ###
+echo "StrictHostKeyChecking no" > ~/.ssh/config
 
 ### clone build repo ###
-ssh-agent bash -c 'ssh-add /keys/id_gogs; git clone $GIT_BUILD_URL /tmp/build'
+ssh-agent bash -c 'ssh-add /keys/id_rsa; git clone $GIT_BUILD_URL /tmp/build'
+
+### run the build ###
+bash /tmp/build/build.sh
