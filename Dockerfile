@@ -17,7 +17,7 @@ RUN apk add --no-cache python py-pip && \
     pip install awscli
 
 ### Install python-boto ###
-RUN pip install boto
+#RUN pip install boto
 
 ### Install PHP and Drupal related tools ###
 RUN apk add --no-cache php5 php5-openssl php5-json php5-phar php5-ctype curl git openssh
@@ -28,7 +28,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     chmod +x /usr/local/bin/drush
 
 ### Install Ansible ###
-RUN apk add --no-cache ansible
+RUN apk add --no-cache ansible py-boto
 
 ### Add start script ###
 COPY start.sh /start.sh
