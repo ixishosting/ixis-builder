@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc
+FROM frolvlad/alpine-glibc:alpine-3.4
 
 WORKDIR /tmp
 
@@ -28,7 +28,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     chmod +x /usr/local/bin/drush
 
 ### Install Ansible ###
-RUN apk add --no-cache ansible --repository http://dl-3.alpinelinux.org/alpine/edge/main/ --allow-untrusted
+RUN apk add --no-cache ansible
 
 ### Add start script ###
 COPY start.sh /start.sh
