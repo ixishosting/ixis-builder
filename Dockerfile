@@ -30,6 +30,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 ### Install Ansible ###
 RUN apk add --no-cache ansible py-boto
 
+### Install Jq ###
+RUN apk add --no-cache jq
+
 ### Add start script ###
 COPY start.sh /start.sh
 
