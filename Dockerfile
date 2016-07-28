@@ -13,7 +13,7 @@ RUN tar xzvf rancher-compose-linux-amd64-v0.9.0.tar.gz && \
 RUN apt-get update
 
 ### Install PHP and Drupal related tools ###
-RUN apt-get install -y --allow-unauthenticated ca-certificates libedit2 libidn11 libmysqlclient18 libxml2 lsof mysql-common openssl php-console-table php-pear php-cli wget curl
+RUN apt-get install -y --allow-unauthenticated ca-certificates libedit2 libidn11 libmysqlclient18 libxml2 lsof mysql-common openssl php-console-table php-pear php-cli wget curl git
 
 ### Install composer and drush ###
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
