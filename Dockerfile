@@ -12,21 +12,21 @@ RUN tar xzvf rancher-compose-linux-amd64-v0.9.0.tar.gz && \
 ### Update apt cache ###
 RUN apt-get update
 
-RUN apt-get install python-pip && \
+RUN apt-get -y install python-pip && \
     pip install awscli
 
 ### Install PHP and Drupal related tools ###
-RUN apt-get install -y --allow-unauthenticated ca-certificates libedit2 libidn11 libmysqlclient18 libxml2 lsof mysql-common openssl php-console-table php-pear php-cli wget curl git
+RUN apt-get install -y ca-certificates libedit2 libidn11 libmysqlclient18 libxml2 lsof mysql-common openssl php-console-table php-pear php-cli wget curl git
 
 ### Install composer and drush ###
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     wget -O /usr/local/bin/drush http://files.drush.org/drush.phar && \
     chmod +x /usr/local/bin/drush
 
-RUN apt-get -y install --allow-unauthenticated ansible
+RUN apt-get -y install ansible
 
 ### Install Jq ###
-RUN apt-get -y install --allow-unauthenticated jq
+RUN apt-get -y install jq
 
 ### Add start script ###
 COPY start.sh /start.sh
