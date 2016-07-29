@@ -12,6 +12,9 @@ RUN tar xzvf rancher-compose-linux-amd64-v0.9.0.tar.gz && \
 ### Update apt cache ###
 RUN apt-get update
 
+RUN apt-get -y --allow-unauthenticated install python-pip && \
+    pip install awscli
+
 ### Install PHP and Drupal related tools ###
 RUN apt-get install -y --allow-unauthenticated ca-certificates php5-cli wget curl git
 
