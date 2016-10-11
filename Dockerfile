@@ -39,7 +39,7 @@ RUN apt-get update
 RUN apt-get -y --allow-unauthenticated install docker-engine
 
 ### Add start script ###
-COPY start.sh /start.sh
+ADD start.sh /start.sh
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
